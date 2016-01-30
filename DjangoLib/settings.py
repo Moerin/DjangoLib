@@ -22,7 +22,19 @@ SECRET_KEY = 'eulxt5+hnjs8r*ntgpcs621cw@0cvjb4&b+e+#@o31rl(kng%i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': ['library/templates/library/'],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors':[
+                'django.contrib.auth.context_processors.auth'
+            ],
+            'debug': DEBUG,
+        },
+    },
+]
 
 ALLOWED_HOSTS = []
 
@@ -37,7 +49,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'debug_toolbar',
-    'django_extensions'
+    'django_extensions',
+    'library'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,3 +96,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
