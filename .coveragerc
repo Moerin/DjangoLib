@@ -4,6 +4,7 @@ omit =
     manage.py
     reports/*
     requirements/*
+    env.*
 
 [xml]
 output = reports/coverage.xml
