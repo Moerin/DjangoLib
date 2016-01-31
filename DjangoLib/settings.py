@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'debug_toolbar',
     'django_extensions',
+    'django_jenkins',
     'library'
 )
 
@@ -99,3 +100,11 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+JENKINS_TASKS = (
+        'django_jenkins.tasks.run_pylint',
+        'django_jenkins.tasks.run_pep8',
+        'django_jenkins.tasks.run_flake8',
+        'django_jenkins.tasks.run_pyflakes',
+        )
+
