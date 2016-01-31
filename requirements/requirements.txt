@@ -8,7 +8,7 @@ coverage==4.0.3
 decorator==4.0.6
 django-debug-toolbar==1.4
 django-extensions==1.6.1
--e git://github.com/kmmbvnr/django-jenkins.git@23854b14fc63aeb5c995e429551927f6de7fb433#egg=django_jenkins-origin/master
+-e git+git://github.com/kmmbvnr/django-jenkins.git#egg=django-jenkins
 djangorestframework==3.1.2
 drf-extensions==0.2.7
 flake8==2.5.2
