@@ -1,0 +1,9 @@
+# .coveragerc to control coverage.py
+[report]
+omit = 
+    manage.py
+    reports/*
+    requirements/*
+
+[xml]
+output = reports/coverage.xml
