@@ -1,3 +1,5 @@
 reports
 .cache
 .*
+*.vim
+db.sqlite3

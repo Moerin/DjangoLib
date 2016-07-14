@@ -1,7 +1,8 @@
 from django import forms
 
+from .models import Books
 
-class BooksForm(forms.Form):
-    name = forms.CharField()
-    message = forms.CharField(widget=forms.Textarea)
-    file_path = forms.FileField(label='Select a book')
+class BooksForm(forms.ModelForm):
+    class Meta:
+        model = Books
+        fields = ['title', 'author', 'file_path']
